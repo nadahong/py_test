@@ -1,0 +1,31 @@
+You might be wondering if you canadd two vectors, can you subtract,
+multiply or divide two vectors?In NumPy the answer is yes.
+You can vectorize almost any operation.
+You can add two NumPy arrays with a plussign, subtract with a minus sign,
+multiply with an asterisk,
+divide with a slash andexponentiate with a double asterisk.
+These operations all workwith two NumPy arrays.
+Or with a numpy array anda single number.
+You can also do logical operations.
+If you have two arrays ofBooleans you can use ampersandto take the logical and.
+And you can use this vertical barsymbol to take the logical or.
+This is underneath the delete orbackspace key on most keyboards.
+And finally you can use the tildeto take the logical not.
+Which is on the topleft of most keyboards.
+Now make sure your arrays containBooleans if you're going to performthese operations.
+If your arrays have integers insteadthen these symbols will do somethinga bit surprising called bit wise and,
+bit wise or, and bit wise not.
+You can read about those operations inthe instructor notes if you're curious.
+But it's not important for this course.
+You can also use all the standardcomparison operations.
+Now these vectorized operations makea lot of data analysis code super clean.
+And they're also usually fasterthan doing the operations manually,
+using a loop.
+By the way, there's a cheat sheetavailable in the downloadable sectionthat will help you
+remember these operations.
+As well as a bunch of other commonbits of NumPy in Panda's code.
+On the next screen, you'll have a chanceto test out some vectorized operationsand see how they work.
+You'll also write a function that usesvectorized operations to calculatethe overall school completion
+rate in each countryusing the female school completion rateand the male school completion rate.
+To do this, assume that exactly half ofthe population in each country is male,
+and half is female.

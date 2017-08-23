@@ -1,0 +1,11 @@
+Series indexes have an interestingeffect on vectorized operations.
+When you add two NumPy arrays,
+you're adding up elements of the sameposition since there is no index.
+Now, forthe series that you've added up sofar, the positions andindexes have been the same.
+What do you think happensif that's not the case?And if you were to add based on index
+rather than position, what do you thinkwould happen if you were to add up twoseries that had different indexes?
+Try it out and see.
+On the next screen you'll see code toadd a few different Pandas series withwith different indexes.
+Take a look at the results andsee if you can figure out the pattern.
+Once you have a theory about howvectorized operations work forPandas series, watch the solution
+video to see if you are correct.

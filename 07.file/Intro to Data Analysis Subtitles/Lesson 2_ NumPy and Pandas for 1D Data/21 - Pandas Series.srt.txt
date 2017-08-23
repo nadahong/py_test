@@ -1,0 +1,40 @@
+Now that you're familiar with NumPyarrays, let's move on to pandas series.
+A series is similar to a NumPy array,
+butit has a littleadditional functionality.
+For example, if you have a series nameds, then the function s.describe willprint out the mean standard deviation,
+median, and some other statistics aboutyour series as this functionisn't available for NumPy arrays.
+There are also some other benefitsof series over arrays which I'll goover in a minute.
+For now though, I want to focus on thesimilarities between series and arrays.
+All the things you just learnedhow to do on Numpy arrayswill also work on Pandas series.
+You can access elements using the squarebracket notation to get either a singleelement or a slice of elements.
+You can still loop over your series.
+You can call the same convenientfunctions you just saw such as mean andmax, and you can still used
+vectorized operations.
+And just like NumPy,
+pandas series are implemented in C, andthus are much fasterthan using Python lists.
+On the following screen,
+you'll see some test code youcan try out using Pandas series.
+I'd also like you to write a functionthat takes in two series as arguments,
+for example, life expectancy in 2007 andGDP in 2007.
+The countries will be inthe same order for each.
+The function should performthe following simple heuristicto check whether thesevariables seem to be related.
+The function will look at the question,
+when a country has a lifeexpectancy above the mean,
+is the GDP above the mean also?Or vice versa.
+If the life expectancy is belowthe mean, is the GDP below the mean?Your function should return two numbers.
+The first number isthe number of countries whereboth values are above the mean or
+both values are below the mean.
+The second number should be the numberof countries where one value is abovethe mean and
+the other is below the mean.
+So these two numbers should add upto the total number of countries.
+Like I mentioned, the inputs will bepanned as a series, but you shouldbe able to write the same code to solve
+this as you would for NumPy arrays.
+Here's a hint you can use tomake your code a little shorter.
+In Python,
+you can actually add booleans up.
+True will be treated as one andfalse will be treated as zero.
+So in Python true + true = 2.
+So how I would approach this problem is,
+first create an array of booleans.
+The boolean is true if bothnumbers are both below the mean orboth are above, and false otherwise.
+Then I would take the sum of this arrayto find out how many countries meetthat condition.

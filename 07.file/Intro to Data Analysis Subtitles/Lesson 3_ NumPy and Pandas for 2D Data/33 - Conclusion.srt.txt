@@ -1,0 +1,12 @@
+Congratulations, you'vefinished the course.
+Hopefully, you've made someinteresting discoveries aboutthe New York subway data.
+At this point,
+you know how to go through the dataanalysis process from start to finish.
+And you can use NumPy's and Pandas towrite data analysis code that's clean,
+concise, and runs quickly.
+Great job.
+I hope you've enjoyed taking this courseas much as I enjoyed creating it.
+I want to hear your thoughts.
+Please write a forum post sharing whatwere your favorite parts of the courseand what suggestions do you have for
+how to improve it.
+And by the way forsome extra fun check out the pandaslinks in the instructor notes.

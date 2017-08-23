@@ -1,0 +1,20 @@
+Before getting started on this function,
+I'm going to think abouthow I would calculate the overallcompletion rate for a single country.
+So let's say i have these two values fora female and male completion rate.
+To get the overall completion rate,
+I would add up these two values anddivide by two.
+Sure enough, that looks like it worked.
+Now because of Numpy'svectorized operations,
+I can actually use this exactsame line of code for arrays.
+To demonstrate that,
+I'll show the results on these shorterarrays with data for only 20 countries.
+First, if I add the two arrays together,
+I get an array withthe sum of the female andmale completion rate for each country.
+So each element inthe resulting array is the sumof the corresponding elementsfrom the two previous arrays.
+I'll name this array total_array.
+Then if I divide the total array by two,
+I get an array where each elementis half of the correspondingelement from total array.
+This is the result I wanted, soI'll scroll up and fill in my function.
+So the code for this functionis return (female_completion +male_completion) / 2.
+And just like when doingarithmetic on single numbers,
+adding parentheses is important.

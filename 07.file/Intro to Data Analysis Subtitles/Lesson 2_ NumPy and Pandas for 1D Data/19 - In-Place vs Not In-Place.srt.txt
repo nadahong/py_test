@@ -1,0 +1,14 @@
+A common term for the behavioryou just saw is that plus equalsoperates in place while plus does not.
+That is,
+plus equals is storing all the newvalues in the same places the originalvalues were stored rather than
+creating a new array to store them in.
+Operations that are not in placecan be a lot easier to think about.
+Like you just saw,
+when you do in-place operations,
+variables can be modified even when itdoesn't look like they will change,
+such as the variable bin the previous example.
+In this course we'll mostly be usingoperations that are not in-place.
+I prefer to use just plus forvectorized addition, not plus equals.
+Here's another place wherethis concept comes up.
+Read through this code snippet, anddecide what you thinkthe output will be.
+Again, if you're not sure, eithertry it out, or take your best guess.

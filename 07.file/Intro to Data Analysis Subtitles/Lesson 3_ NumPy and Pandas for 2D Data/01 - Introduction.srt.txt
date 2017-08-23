@@ -1,0 +1,6 @@
+In the last lesson you used NumPy andPandas to analyze one dimensional data.
+In this lesson, you'll learn a lot morefeatures of both libraries that you canuse to analyze two dimensional data.
+By the end of the lesson, you'll be ableto rewrite a lot of the codes that youwrote in lesson one but this time using
+Pandas and if you're wondering why I'mwearing this shirt, it's because you'llalso be working with a new data set this
+lesson containing subway ridership andweather data for New York City.
+Let's get started.

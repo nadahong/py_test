@@ -1,0 +1,17 @@
+The first thing I want to dois create an array of booleansindicating whether each student
+cancelled in the first week.
+I'll call the array is_paid and it willcontain true for students who remainedenrolled for at least seven days before
+cancelling and false for others.
+I can create this arrayusing vectorized operationsby comparing the days_to_cancel
+array to the value 7.
+Then I'll create an arraycalled paid_time.
+Which includes the time spent foreach student, butonly including paid students.
+To keep only the paid students,
+I'll us is paid as an indexarray into time spent.
+Finally I'll take the mean ofthis array to get the mean timespent by paid students.
+And this code could actually all besimplified down to a single line.
+And again,
+once you're used to index arrays andvectorized operations, I think thisline of code is very clear and concise.
+It says look at the time spent foreach student, but only forstudents who stayed enrolled at
+least seven days before cancelling.
+And then take the mean of that time.

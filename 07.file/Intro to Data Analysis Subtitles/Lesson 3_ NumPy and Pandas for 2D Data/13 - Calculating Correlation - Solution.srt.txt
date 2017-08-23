@@ -1,0 +1,31 @@
+To write this function, I'll firstneed to standardize both x and y.
+You've written code to standardizea variable before, butthis time it's a little different
+because you'll need to make sure youtake the uncorrected standard deviationby passing ddof = 0 for both variables.
+As before, I also need to becareful about the parenthesis.
+Then to multiply each pair of values,
+I'll use times which doesvectorized multiplication.
+Then I'll use mean to take the averageof the products, adding parentheses sothat I take the mean of the products
+rather than just taking the meanof y and then multiplying by x.
+And I'll return this value.
+NumPy actually has a function that willcalculate Pearson's r for you, butit can be useful to write the code
+yourself the first time sothat you'll understand what it's doing.
+In the future though,
+I'd recommend using NumPy's functionrather than writing your own.
+Next, I'll use this function tocalculate the correlation between someof the variables in the subway data.
+First, I'll calculate the correlationbetween entries and hourly, orthe number of entries each hour and mean
+precipi or the mean precipitation forthe the day, andI can see that the result is about 0.03.
+This value is positive, which meansthat when precipitation is higher,
+subway ridership is higher as well.
+But it's also very small,
+which means that the relationshipisn't particularly strong.
+For comparison, I'm going to takethe correlation between two variablesthat I expect to be more
+strongly correlated.
+ENTRIESn_hourly is the number of peoplewho ride the subway each hour, andENTRIESn is a cumulative total of how
+many people have ridden the subwaythat increases each hour.
+I definitely expect these twovariables to be correlated,
+although I don't expect the relationshipto be super strong, necessarily,
+since the total number of entriesdepends on the number of entries forall previous hours as well as all
+the entries in the current hour.
+But the result I get here is about 0.58,
+which is much higher than forentries in hourly and mean percipi butis also much less than the maximum
+value for Pearson's r, which is one.

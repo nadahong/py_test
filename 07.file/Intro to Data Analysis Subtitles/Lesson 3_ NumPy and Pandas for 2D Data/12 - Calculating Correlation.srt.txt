@@ -1,0 +1,56 @@
+In the following quiz, I'd like you towrite a function to calculate what'scalled the correlation of two variables.
+It's also known as Pearson's r.
+In the previous lesson,
+you used a rough heuristic to determinehow correlated two variables were.
+For each pair of values, you lookedat whether both values were abovetheir respective means, both below,
+or one above and one below.
+The idea behind Pearson's r is similar.
+First, you standardize each variable.
+That is, convert it to a numberof standard deviations above orbelow the mean.
+Then, you multiply each pair of valuesand take the average of the products.
+So, r is equal to the averageof x in standard units,
+times y in standard units.
+Let's take a look at what this is doing.
+First, by standardizing,
+we're converting bothvariables to a similar scale.
+So for example, if the variables weremuch more spread out in the y dimensionthan in the x dimension,
+then standardizing would spread thevariables out more in the x dimension.
+Next, since the mean issubtracted from each data point,
+the area is essentiallydivided into four quadrants.
+Where both values are above the mean,
+both values are below the mean, orone value is above the mean andthe other is below.
+If both values are above the mean,
+then the standardized x value andy value will both be positive, sothe product will be positive as well.
+If both values are below the mean,
+then the standardized x andy coordinates will both be negative.
+So again the product will be positive.
+Thus is Pearson's r is positive,
+then as one variable increasesthe other tends to increase as well.
+On the other hand,
+if one value is below the mean, andthe other value is above the mean,
+then the product will be negative.
+So if Pearson's r is negative,
+that means as one variable increases,
+the other tends to decrease.
+Pearson's r is more accurate thanthe heuristic you used earlier,
+since it takes into account moreinformation than just which quadranteach data point lies in.
+For example, this data point is veryclose to the mean of the y values, sothe contribution to
+Pearson's r will be small.
+On the other hand, this data pointis very far from each of the means.
+So the contribution toPearson's r will be large.
+Pearson's r can range from -1 to +1.
+If it is near zero, that means thevariables are not strongly correlated.
+There's a link in the instructornotes to a page with graphs fordifferent values of Pearson's r.
+So that you can get a feel forwhat different values of Pearson'sr look like in a scatter plot.
+In the next exercise you're going towrite a function to compute Pearson's r.
+Then you can use it to check somedifferent variables from the New Yorksubway data set, and
+see how correlated they are.
+When standardizing both x and y,
+you'll need to pass the argumentddof=0 to Panda's standarddeviation function.
+This argument controlswhether the corrected orthe uncorrected standarddeviation is taken.
+If you don't know whatthe difference is,
+there's more information on the pagelinked in the instructor notes.
+Many times when you're standardizingvariables, it doesnt matter too muchwhether you take the corrected or
+uncorrected standard deviation.
+But to calculate Pearson's rspecifically, it's important to takethe uncorrected standard deviation,
+which you can do using ddof=0.

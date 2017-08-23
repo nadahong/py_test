@@ -1,0 +1,4 @@
+Here's another question, suppose youmultiply a vector by a single number,
+also called a scalar.
+What would you expect the result to be?I've added some options here.
+Again, there's no right or wrong answer.

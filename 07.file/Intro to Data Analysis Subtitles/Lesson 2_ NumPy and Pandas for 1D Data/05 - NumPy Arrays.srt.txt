@@ -1,0 +1,67 @@
+Both Panda's andNumPy have special data structures,
+made to represent one-dimensional data.
+By the way, NumPy stands forNumerical Python.
+In Pandas, this data structureis called a series, andin NumPy it is called an array.
+Pandas andNumPy also both have structures fortwo-dimensional data, which you'lllearn about in the next lesson.
+I typically prefer touse Pandas' series,
+since they have morefeatures than NumPy arrays.
+But NumPy arrays are simpler, soI'm going to cover those first.
+Panda series are built ontop of NumPy arrays, soit will be important to understand NumPy
+arrays when you move on to using series.
+In many ways, a NumPy arrayis similar to a Python list.
+It contains a sequence of elements andthose can be anything.
+But suppose you had a Numpyarray of US state codes.
+So here's Alabama, Alaska, Arizona,
+Arkansas, California, and so on.
+I included quotes around thesestates because they are strings.
+Like lists, the elements ofa NumPy array are in order, andyou can access elements
+by their position.
+In this NumPy array,
+Alaska is at position 0,
+Arkansas is at position 1, and so on.
+So if you had a NumPy array named a,
+then a[0] would return the string AL forAlaska.
+Also like lists, you can access a rangeof elements from a NumPy array usingsomething called slicing.
+Again, the syntax is the same as forlists.
+So, a[1:3], would return an NumPyarray containing Alaska and Arizona.
+Note that just like for lists, the upperbound is not inclusive, so I gotthe element at position 1 and position
+2, but not the element at position 3.
+And finally you can use forloops with NumPy arrays using code like,
+for x in a:.
+So, what are the differences betweena NumPy array and a Python list?First, NumPy arrays are designed for
+each element to have the same data type.
+So, either each element should bea string, each element should be an int,
+each element should be a boolean orsomething else.
+You can create a Python listthat contains some strings,
+some ints, some booleans, andso on, all mixed together.
+And you can still do that in NumPy, butit was designed foreach array to have a single data type.
+Second, NumPy includes a bunchof convenient functions.
+For example, the functions to takethe mean into standard deviation.
+Now you saw last lesson that youcan also use these functions onPython lists.
+But, if your data is in NumPy arraythen these functions will be faster.
+Now this is one place thatthe type of the elements matters,
+since it only makes sense to take themean of the array if all of the elementsare numerical.
+Another difference is that NumPyarrays can be multidimensional.
+You'll learn more about thisin the next lesson, butit's similar to makinga list of lists in Python.
+On the next screen you'll be givena chance to play around with some NumPycode, and see what it does.
+I recommend that you read each sectionof code, and predict what will beprinted, then change false to true, and
+use Test Run to see if you were right.
+If you're not sure what will beprinted just use Test Run to find out.
+You can also add your own code andtry out other things if you're curious.
+At the bottom of the code,
+there's a function foryou to write called max_employmentto check your understanding.
+It take these arguments to NumPy arrays.
+The first one contains country names andthe second one containsemployment data for each country.
+The country names are in the sameorder as the employment data.
+The function should return the name ofthe country with the highest employment,
+and the corresponding maximum employmentvalue based on the given data.
+When you click Test Run, in addition toseeing the output of any code you write,
+you'll also see the result of runningyour function on the full employmentdata set for a few different years.
+If you click Submit, the grader willcheck whether your function is correct.
+If you want to test your function onsomething smaller than the full dataset, I recommend testing it out on
+the arrays provided at the top of thissection of code.
+This one contains the first 20countries in the data set, andthis one contains employment data for
+those countries in the year, 2007.
+Since those arrays are namedcountries and employment,
+you can test your function on thosearrays by using the line print,
+max_employment(countries, employment).

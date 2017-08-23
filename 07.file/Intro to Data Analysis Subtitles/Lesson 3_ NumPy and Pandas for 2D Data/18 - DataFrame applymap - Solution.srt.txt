@@ -1,0 +1,12 @@
+To write the convert_grades functionI'll first write a function thatconverts a single grade, and
+then I can apply that functionto the entire data frame.
+I'll call the singular versionof the function convert_grade.
+I wrote this function usinga series of if statements.
+First, if the grade was atleast 90 then I returned A,
+then if the grade was at least80 I returned B and so on.
+Now I'll try this functionout on a few single values.
+If I convert the grade 80, I get B.
+And if I convert 79, I get C,
+which is what I expected.
+Next I can use the applymap functionto call the convert_grade functionon each element of the data frame.
+Now I'll call this function onthe example grid's data frame andit looks like it worked.

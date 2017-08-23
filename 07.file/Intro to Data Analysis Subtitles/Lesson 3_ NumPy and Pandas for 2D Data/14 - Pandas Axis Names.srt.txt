@@ -1,0 +1,11 @@
+Just like NumPy, many Panda'sfunctions also take an axis argument.
+And you can use axis = 0 oraxis = 1, like for NumPy,
+but you can also use axis = index oraxis = columns.
+Now this sounds like it should makeit easier to remember which versionof the axis argument is which, but
+it can actually be pretty confusing.
+Taking the mean with axis equalscolumns will actually notgive the mean of each column.
+Instead it gives the mean of each row.
+The idea is that you are takingthe mean along the columns.
+Similarly with axis = index, youare taking the mean along the index, orthe rows.
+I still have trouble remembering whichway the axis argument will work, soagain I always try it out in iPython and
+see what happens beforeI use the argument.

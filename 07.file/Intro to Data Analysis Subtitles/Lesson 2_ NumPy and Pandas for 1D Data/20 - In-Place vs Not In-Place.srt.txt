@@ -1,0 +1,14 @@
+The answer to this question isa bit surprising or at least,
+it surprised me when I first learned it.
+Because Numpy arrays have differentbehavior than Python lists.
+You start off with the variablea referring to the array 1, 2, 3, 4, 5.
+However, when you take a slice ofthe first three elements of the array a,
+Numpy doesn't actuallycreate a new array.
+Instead, slice refers to what'scalled a view of the original array.
+It will look like a new array, butif you modify it,
+the original array is modified as well.
+This makes slicing a Numpy very fast,
+since you don't have to createa new array or copy any new values.
+But it means you should be verycareful any time you want to modifya slice of an array.
+So the correct answer here is thatthe output is this second choice.
+An array containing 100, 2, 3, 4, and 5.

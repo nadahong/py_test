@@ -1,0 +1,40 @@
+There's another useful operation you cando when you have two NumPy arrays ofthe same length.
+This time, the second NumPy arrayneeds to contain booleans, andthe first can contain any type,
+not just numbers.
+For example, suppose your first array,
+a, contains the numbers 1, 2,
+3, 4, and 5.
+And your second array, b, containsthe booleans false, false, true,
+true and true.
+Then the code a[b]would return a shorterarray containing only the elements 3,4,
+and 5.
+The second array is calledan index array, andit tells you which elementsof the first array to keep.
+So here we didn't keep 1because that element was false.
+We didn't keep 2 because that was false.
+But we did keep 3, 4, and5 because those were true.
+When you combine this with thevectorized operations you learned aboutpreviously, this can be very powerful.
+In this example,
+I kept all the elements greater than 2.
+So I could have created the booleanarray b with the code b = a > 2.
+I could also have created this arraywithout using the variable b at all.
+To do this I would use the code a [a>2],
+and that would have the same result.
+In my opinion,
+this piece of code is a very concise andclear way of saying keep all theelements of a that are greater than two.
+Right now it may take more effort tounderstand this piece of code than itwould have taken you
+to understand a loop.
+First, you have to rememberthat a is an array.
+Then you have to remember that comparingan array to a single number isa vectorized operation that
+returns an array of booleans, andthen you have to rememberabout index arrays.
+However once you're used to it thiscan really speed up the process ofwriting your code.
+And as usual, this code will run fasterthan the loop since all the operationsare implemented in C.
+To give you some practice using indexarrays I'm going to take an example fromthe previous lesson.
+I want you to write a functionthat takes in two NumPy arrays.
+The first, time_spent,
+contains the total timeeach student spends inthe classroom in the first week.
+The second, days_to_cancel,
+contains contains the number ofdays before that student cancelled.
+I want you to calculate the meantime spent in the first weekamong only students who do not
+cancel for at least 7 days.
+As a hint, you'll first want to convertdays_to_cancel into an array ofbooleans that you can
+use as an index array.

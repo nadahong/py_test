@@ -1,0 +1,41 @@
+In the last lesson you saw that num piarrays have a d type which is the typeof each element in the array.
+For example the d typeof this array is int64.
+Int64 means a 64 bit integer.
+Now this also applies totwo dimensional arrays.
+Each element in the array isexpected to have the same type.
+This can make it inconvenient touse unconventional num pi arrays torepresent the contents of a CSV file.
+For example, suppose I tried to createa num pi array to represent the studentenrollment data from lesson one?
+I've recreated a smallpiece of that data here.
+Even though when I created the array,
+I entered integers andvolumes without quotes, each elementhas been converted to a string.
+The dtype is also s14,
+meaning strings of length at most 14.
+Obviously it doesn't make sense to takethe mean of strings, such as cancelled,
+but it would make sense to take the meanof just the days_to_cancel column.
+The days_to_cancel column is columnthree, so I can access it like this.
+However, if I take the mean ofthis column, then it doesn't work.
+Instead, num pi says that it cannotperform the reduce with a flexible type,
+which means that it doesn't know howto take the mean when not all ofthe values are numbers.
+That's one benefit of Panda's dataframesover two dimensional num pi arrays.
+A dataframe is also a twodimensional data structure, buteach column is assumedto be a different type.
+Another benefit is that dataframes haveindexes similar to Panda's theories.
+There is an index value foreach row, and a name for column.
+So instead, I'll createa Pandas DataFrame from this data.
+I can do that by passing ina dictionary mapping column namesto lists of values for that column.
+So, one key in the dictionarywould be account_key, andthe list would be all of the values for
+the account_key column.
+And similarly for the other columns.
+Now when I take a look at the dataframe, it's displayed in a nice table.
+The column names are at the top andthe role indexes are integersstarting at zero.
+There are some other ways tocreat Pandas data frames as well,
+which you'll take a look at soon.
+Now if I take the meanof the data frame,
+it takes the mean of each numericalcolumn and ignores the others.
+It's udacity is a numerical columnhere with trues treated as one andfalses treated as zero.
+You'll notice that Pandas did not takethe mean of the entire data frame here,
+but of each column.
+Since each column is assumedto be a different type,
+this makes more sense for Pandas.
+You can also use the axis argument totake the mean of each row instead,
+although that won't work in this case,
+since each row containssome non-numerical data.

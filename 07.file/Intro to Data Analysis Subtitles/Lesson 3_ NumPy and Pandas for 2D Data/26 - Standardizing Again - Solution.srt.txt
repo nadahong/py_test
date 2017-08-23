@@ -1,0 +1,56 @@
+I'm going to show writing the code onthis data frame of grades with two examsand five students.
+First, I know that I'm going toneed the mean of each column,
+which I can get using grades_df.mean.
+This gives me the mean for exam1 andthe mean for exam2 in a Pandas series.
+I'll also take a look atthe original data frame here.
+Now, in order tostandardize each column,
+I want to subtract the mean ofeach column from that column.
+So I want to subtract the first meanfrom every value in the first column,
+and I want to subtract the second meanfrom every value in the second column.
+This works the same way yousaw addition just working.
+I'll take grades_drminus grades_df.mean.
+And sure enough, looking atthe first two scores for exam1,
+I see a negative score for Andre sincehis score was below the mean, anda positive score for Barry since
+his score was above the mean.
+Next I need to divide each column byits corresponding standard deviation,
+which I can do in the same way.
+I use grades_df.std to get the standarddeviation of each column, andthen I divide the data frame by the
+series to divide each exam score by itscorresponding deviation.
+As usual, watch out for the parentheses.
+And running this again,
+I can see that each exam has beenput in standard deviation units.
+Notice that this code actuallylooks exactly the sameas the code to standardizea single series.
+That's pretty cool, but as you'll seein a minute, it's sort of deceptivelysimple since standardizing each
+row is a little more involved.
+So how would I go aboutstandardizing each row?Well, first I'll take a look at the
+original data frame again for reference.
+I know that this time I'llneed the mean of each row andI can get that by using axis = columns.
+Remember this means I'm takingthe mean along each columnwhich will give me the mean of each row.
+And sure enough this gave me the meanof each student across the two exams.
+Now I need to subtract the first meanfrom the first row of the data frame,
+the second mean from the second row andso on.
+However, if I try to use grades df minusgrades_df.mean like I did a minute ago,
+it will try to subtract the amount ofthese values from one column of the dataframe which actually won't work since
+the indexes of this series don't line upwith the column names of the data frame.
+So I would just get a bunch of demands.
+Instead, I'll need to use the subfunction which stands for subtract anddoes the same thing as the minus sign
+but it can also take an access argument.
+In this case, the access shouldbe index since I want to match upthe elements of the series with elements
+of the data frame using the row indexes.
+And now I'll try this out.
+Here I can see that allthe values in column one andall the values of column twohave the same absolute value.
+Which is what happens when you subtractthe mean from only two values.
+I'll name this data framemean_diffs to use later.
+Next, to divide by the standarddeviation I need very similarcode to before.
+I'll take the standard deviationof the grades column with axisequals columns so that I get
+the standard deviation of each row.
+Then I'll use mean_diffs.div todivide the mean_diffs data frameby the standard deviations series.
+And then I'll use axis='index' to matchup elements based on row indexes.
+You can see here thatthe results are the same foreach row, which again happensbecause there's only two columns.
+Now this code actually looks exactlythe same as the code to standardize eachcolumn, except that each axis argument
+was the opposite of the default.
+This is something to watch out forwhen writing Pandas code.
+If you're doing a very common operationthen you likely won't need to specifyan axis since the default
+axis will be correct for you.
+On the other hand, if you're doingsomething slightly unexpectedlike standardizing each row instead
+of each column of a data framethen you're going to have to specifynon-default axes all over the place.

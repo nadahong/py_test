@@ -1,0 +1,15 @@
+We provided code for you to loadeach variable into something calleda data frame,
+which you'll learn about next lesson.
+Then this code extracted a seriesfrom each data frame corresponding tothe US only.
+If you wanted to examine a countryother than the United States,
+you could have changed this value.
+Now, to make my plots,
+I'll add the lines %pylab inline,
+to make my plots appearwithin the iPython notebook.
+But if youre not using iPython notebookyou wouldn't have added this line.
+And then I can plot the employment inthe US by calling employment_us.plot.
+Here, I can see that the years,
+which are the indexes of the series,
+have been filled in on the x-axis.
+And the employment values havebeen filled in on the y-axis.
+And the same code would work forthe other variables.

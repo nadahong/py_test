@@ -1,0 +1,12 @@
+Here's a query I use to try tofind the answer to this problem.
+Pandas add two series without nans.
+And it looks like the firstresult is about adding pandasseries with differentindices without getting nans.
+That sounds like what I'm wondering.
+The first answer on this pagesuggests using the fill value andsome sample code is provided.
+In the example code,
+I can see that the person who posted,
+is advocating using the .add function,
+instead of the +.
+And then the .add function cantake an argument, fill_value=0.
+So I'll try that outon these two series.
+And it looks like the result isexactly what I was hoping for.

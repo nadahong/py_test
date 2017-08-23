@@ -1,0 +1,6 @@
+Congratulations, youfinished the lesson.
+You learned how to use Numpy andPandas to analyze one-dimensional datausing code that's cleaner and
+runs faster, great job.
+In the next lesson,
+you'll build on what you've learned andstart analyzing two-dimensional data.
+I'll see you then.

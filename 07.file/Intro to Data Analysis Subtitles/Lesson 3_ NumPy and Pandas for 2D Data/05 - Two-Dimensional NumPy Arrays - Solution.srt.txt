@@ -1,0 +1,36 @@
+First, I'm going to write code that willwork on this small example array, sothat I can see whether it's
+working at every step.
+Then when I'm finished, I'll turn itinto this function, mean riders formax station.
+The first step is to find the stationwith the maximum riders onthe first day.
+The first day is row 0 of the array,
+which I can get by passing 0 as the rowposition, and colon, meaning all ofthe columns, as the column position.
+And I"ll check that that worked andsure enough, the first row was printed.
+Now to find the maximum value,
+I would find the .max function.
+What I actually need is the stationthat had the maximum value.
+To get that,
+I'll use the arg max function,
+which will return the positionof the maximum value.
+Taking a a look,
+I can see it was position 3.
+And sure enough, column 3 inthe array has the maximum value.
+I'll name this value max_station.
+Next I want to find the meanriders per day for that station.
+First I want to get the ridershipdata for that station, soI'll select all rows, and
+the max_station column.
+And I'll take a look, and sure enough,
+that gives the correct columnof the ridership data.
+Next I'll take the mean of those values.
+And I'll call it mean_for_max, meaningthe mean value for the max station.
+Finally, I need to findthe overall mean for comparison.
+I can do that by simplytaking ridership.mean.
+Now I'm ready to move thiscode inside of my function.
+Since the example array and the argumentto the function have the same name,
+ridership, I don't needto rename anything.
+And I'll return both values.
+Next I'll call this functionon the example array.
+It looks like the overall meanwas about 2300 and the mean forthe max station was about 3200.
+So the station with the higherridership on the first dayalso had a higher ridership
+overall than the average.
+Of course, that doesn't mean it hasthe maximum overall ridership out ofany station, but you'll calculate
+that in the next exercise.

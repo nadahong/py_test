@@ -1,0 +1,15 @@
+Throughout this lesson, I'm goingto use examples from a new datasetwhich contains information about
+employment levels, life expectancy, GDP,
+and school completion ratesin various countries.
+This data was collected by the siteGapminder which is linked inthe instructor notes.
+In this lesson I won't be going throughthe data analysis process in order,
+since I want to focus on how touse NumPy and Pandas effectively.
+Instead you'll be doing a bunchof analysis on this dataset, butnot necessarily in order.
+I still want you to start off bythinking of some questions though.
+In the downloadable section thereis a file which explains whatdata is available in more detail.
+Take a look at that file andtry to think of at least five questionsthat you could answer using this data.
+Then share the questions you thought ofwith your classmates on the forums, andwhen you're done, check these boxes.
+The csv files containing the actualdata are also available inthe downloadable section,
+if you'd like to take a look.
+But that shouldn't be necessarysince you'll be able to complete allthe programming exercises in this
+lesson within the Udacity editor.

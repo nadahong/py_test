@@ -1,0 +1,20 @@
+First, I want to find the mean ridershipper day for each subway station.
+Since each station is a column,
+I can do this using the meanfunction with an axis of 0.
+Sure enough, that gave me five means.
+One for each of the subwaystations in this array.
+I'll call this array station riderssince it contains the ridership foreach station.
+Next, I need to find both the maximumdaily ridership and the minimum.
+I can find the maximum bytaking station_riders.max andthe minimum by takingstation_riders.min.
+Next I'll move this code insideof my function, and again,
+I don't need to changeany variable names.
+And I'll return the max_daily_ridership,
+and the min_daily_ridership.
+Finally I'll run this functionon the example array.
+It looks like the station withthe maximum riders per day had about3200 and the station with
+the minimum had about 1,000.
+The maximum is the same value that wesaw last time as the mean ridership forthe station with the maximum
+on the first day.
+Which indicates that the station inthis case that had the most riders onthe first day also had
+the most riders overall.
+The minimum is lower than the overallmean we saw before, which makes sense.

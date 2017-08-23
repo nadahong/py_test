@@ -1,0 +1,54 @@
+So, what are the benefits of usinga panda series instead of a numpy array?I mentioned before that panda
+series have some extra functionsnot available for numpy arrays.
+For example, the describe function.
+However, the main differencebetween panda series andnumpy arrays is that a panda series
+has something called an index.
+Let's take a look at an example.
+Throughout this lesson,
+we've been looking at data fora bunch of different countries, andI've been creating one array to hold
+the actual data points andone to hold the country names.
+In pandas,
+I would only create one series, andI would use the data pointsas the values of that series.
+Then I would use the country namesas the index for the series.
+Now I'll delete the numpy array code andprint out the series.
+You can see here that pandas ismatching up each index valueto the corresponding data point.
+I've said before that numpy arrays arelike souped version so of Python lists.
+Similarly, a pandas series is likea cross between a list and a dictionary.
+In a list, elements are stored in orderand you access them by their position.
+And you've just seen thatthat's true for a series also.
+These values are stored in order, andyou can access them by their position.
+In the dictionary, on the other hand,
+you can have a key suchas a country name, anda value such as a life expectancy,
+and you can look up values by keys.
+You saw earlier thatthe code life expectancyat zero will give the life expectancy
+at position zero in the series.
+Pandas also has an attributecalled walk that lets you look upvalues by their index.
+If I run life_expectancy.loc Angola,
+then I'll see the life expectancy forAngola, without needing to know whichposition Angola is In the list.
+So, what happens if you createa series without specifying an index,
+like we did earlier?Well, then the numbers zero, one,
+two, and so on get used as the index,
+by default.
+So, before, when I accessedelements using square brackets,
+it wasn't clear whether I wasaccessing by index, or by position.
+At this point, it should be clear to youthat the square brackets are accessingelements by position,
+since there is no value in our lifeexpectancy series with index zero.
+I prefer to be a bit more explicitwhen using a series though.
+Pendas has an attributecorresponding to the lock attributecall iloc to accesselements by position.
+These two lines of codedo the same thing, butthe version using iloc is justa little more clear in my opinion.
+By the way, here's a terminology note.
+In this numpy array,
+many people will say something likethe country Albania is at index zero.
+And they'll call using squarebrackets to access an array elementindexing into the array.
+I've been trying to avoidthis terminology, andcall this position zero rather than
+index zero, since in a panda series,
+the index andthe position are not the same.
+But be aware that you might hearthe term index used inconsistentlyelsewhere.
+On the next screen,
+I want you to rewrite the max_employmentfunction that you wrote atthe beginning of this lesson.
+Which finds the highest employmentrate in some given data, andthe country name with
+that employment rate.
+This time, the input will be a singleseries, rather than two numpy arrays,
+and the index of that serieswill be the country names.
+Try using the pandas argmax function.
+There's a link to the documentationin the instructor notes.

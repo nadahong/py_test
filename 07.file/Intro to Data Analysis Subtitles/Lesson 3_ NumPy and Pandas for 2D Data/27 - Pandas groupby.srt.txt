@@ -1,0 +1,68 @@
+A lot of the questions I haveabout the subway data set havesomething in common.
+For example, I'd like to look at howridership varies by hour of the day.
+But the file contains many entries foreach hour of the day from differentdays and different stations.
+So first, I'll need to separate the datainto one group for each hour of the day,
+then take the average ridership for eachhour, then I can analyze these numbers.
+Similarly, I want to look at whetherrain affects subway ridership.
+One possibility would be tobreak the data into two groups,
+data when it is raining anddata when it is not raining,
+then I would compare ridershipbetween the two groups.
+Again, there's a grouping stepfollowed by an aggregation stepwhere I sum up all the entries
+within each group ortake the average ofthe entries within each group.
+I also said I was interested inhow the ridership varies by day ofthe week where again,
+I would need to group by the day ofthe week then aggregate for each day.
+This might remind you of the code forlesson one where you groupeddata by account key and then added up
+engagement records for each account key.
+In lesson one, I chose to accomplishthe first step with a function namegroup_data, and the second step with
+a function named sum_grouped_items.
+Pandas has similar built in functionsallowing this type of analysis to bedone with much less code.
+Let's take a look at a concrete example,
+suppose that I had the engagement datafor each student in a Pandas data frame.
+I've created a small data framehere to use as an example.
+Then the code I would write to getthe average number of minutes spent inthe classroom would be
+engagement_df.groupyby('account_key').sum()['total_minutes_vi-sited'].mean( ).
+Now let's go through what each pieceof this code does one bit at a time.
+First, callingengagement_df.groupby('account_key')creates a special type of object
+called a DataFrameGroupBy object.
+I think of it as being a dictionarymapping each account key to a smallerdata frame containing only the rows
+that match that account key.
+Although, it's actually this customobject rather than a dictionary.
+If you want to, you can get a look atthe mapping using the .groups attribute.
+This shows that the account key 1175corresponds to rows 7 through 13 ofthe original data frame.
+And the account key 1200corresponds to rows 0 through 6.
+It's not usually necessary to directlyexamine the underlying groups like this,
+but sometimes, it can be useful toget a sense of what's going on.
+Next, I'll use the .sumfunction on the group by objectto add up each column within each group.
+You can see that this calculatedthat the total minutes visited forthe account key 1175 was 2.7.
+And the total forthe account key 1200 was 696.6.
+Note that the date column is notincluded in this output because it's notpossible to take the sum
+of a bunch of dates.
+But if there were other numericalcolumns in the data frame,
+they would be included here.
+Now when I add at total_minutes_visited,
+I get the same data back but this time,
+it's in a Panda series.
+Notice that before, this was ina data frame with only one column,
+which you can tell because it rendersas a table in the IPython Notebook.
+Again, if there were more numericalcolumns, they would show up in this dataframe, but this series will contain
+only the total minutes visited column.
+And now, since I want to take theaverage across all students I add .mean.
+And that gives me a single number, about350 minutes for these two students.
+Or perhaps even better,
+I could use the describe function.
+And then I'll get a bunch ofmetrics including the mean,
+standard deviation,
+minimum, and maximum.
+Now, the piece of this code that I foundmost confusing when I first learnedabout groupby was the sum function.
+You've seen the sum function before butthat was for data frames.
+This is a groupby object.
+So, I wondered, what other functionsdo groupby objects have available.
+What if there is no functionthat does what you want?Well, similarly to series and
+data frames, groupby objects have a lotof convenient functions built in andif the one you want isn't built in,
+you can use apply and write your own.
+In the following exercise,
+I'd like you to group the subwaydata by a variable of your choice,
+maybe day of the week, hour of the day,
+or whether it was raining.
+Then find the mean subway ridership foreach different value, andeither produce a plot
+showing the results, orsimply print out the numbersif that makes more sense.

@@ -1,0 +1,56 @@
+So far in this lesson, you've workedwith just one data frame at a time.
+However, it's often the case thatyou'll have multiple data frames you'dlike to work with.
+For example, in Lesson 1,
+you had three CSVs.
+So if you had been using Pandas,
+you would have loaded theminto three data frames.
+For example, suppose I wantedto analyze how likely studentsare to cancel once they've
+submitted a project.
+That would require information fromboth the project submissions table andthe enrolments table.
+I've only included a few columns fromeach table to make the example easier.
+Pandas has an operation called mergethat will allow me to combine the twotables into one table.
+This will create a new table withall the columns from both tables.
+Notice that there isn't enrollmentwithout a correspondingproject submission.
+In this example, I'm only interested instudents who didn't submit a project, soI'm not going to include that row.
+You'll see how to do that in a minute.
+So in the new table,
+there will be one row foreach row in the submissions table.
+And the columns corresponding tothe enrollments table will be matched upby account key.
+So the join date foraccount key 1 was 5/11.
+The join date foraccount key 2 was 5/13, and so on.
+Note that if there had been a duplicateentry in the enrollment table, forexample two enrollments for
+the account key 2,
+then any projects submitted by theaccount key 2 would also be duplicated.
+So for the same project submission,
+there would be one row forthe first enrollment, andone row for the second enrollment.
+For this reason it might be a good ideato remove duplicates from the enrolmentstable before performing the merge,
+depending on your use case.
+The code I would write to perform thismerge is submissions.merge(enrolments,
+on='account_key', how='left').
+The on='account_key' specifies howto match up different rows fromthe different tables.
+So, in this case they werematched by account key.
+The how=left determines whathappens if some account keysare present in one table but
+not in the other for example this one.
+The options for this argumentare inner right left and outer.
+And in this case how=innerwould also have worked.
+When you use inner, only rows withan account key present in both tablesare kept, so this row was thrown out.
+If how had been equal to right,
+then rows from the right hand tableenrollments would have been kept,
+even if there was no matchingentry in the submissions table.
+Since there's no data for this accountkey in the project submissions table,
+NaN would have been filled forthose columns.
+How equals left does the exact opposite.
+If there are rows present in the lefttable that are not present in the righttable, it keeps those rows.
+In this case there aren'tany rows like that, soleft and inner do the same thing.
+If you use outer, then all rowsfrom both tables are kept andnans are filled if needed.
+I've found that inner is the most commonkind of merge that I like to do, butit really does depend on the example.
+By the way, if you've used SQL,
+you may recognize that a merge in Pandasis very similar to a join in SQL.
+If you haven't used sequel though,
+don't worry about it.
+Now, for the New York dataset,
+the subway data,
+and for the weather data were originallygathered from separate sources.
+In the following exercise I wouldlike you to use the merge functionto combine the two files
+into a single data frame.
+This will put the data in a similarformat that you've been using inthe lesson up until now.

@@ -1,0 +1,40 @@
+Last lesson, you worked a lotwith one-dimensional data.
+In this lesson, you're going towork with two-dimensional data,
+data with both rows and columns.
+In pure Python without any libraries,
+you might represent thisdata using a list of lists.
+So one list for the first row,
+one list for the second row and soon, andthen put each of those lists on a list.
+In NumPy instead of creatingan array of arrays,
+you can create a singletwo-dimensional array.
+In Pandas,
+there's a different data structure fortwo-dimensional data called a DataFrame.
+Just like last lesson, I prefer touse Pandas since it has additionalfunctionality, but I'm going to start
+with NumPy because it's simpler.
+So what's the difference betweenmaking a single two-dimensionalarray in NumPy Instead of making
+a one-dimensional array whoseelements are also arrays?One important difference is that
+because of how NumPy is implemented,
+making a single 2D arrayis more memory efficient.
+If you'd like to learn more about this,
+follow the link in the instructor notes.
+The syntax for accessingelements is also a bit different.
+Say you wanted to access the elementat row one and column three.
+You would do this usingthe code a[1,3] rather thana[1][3] which is what you would do for
+an array of arrays.
+You can also make either the rowposition, the column position orboth a slice,
+rather than a single numberusing the colon notationyou learned in last lesson.
+Another difference is with the functionsyou learned last lesson, mean,
+standard deviation, and so on.
+With a two dimensional array,
+these functions will operateon the entire array.
+So in this case, mean would calculatethe mean of all these values,
+ignoring which rows andcolumns they were in.
+You can't take the meanof an array of arrays,
+although you could take the meanof each individual row.
+On the next screen, you'll geta chance to play around with usingan umpire array to
+represent subway ridership.
+Each row will be a different date, andeach column will be a different station.
+Try out the example codegiven to see what it does.
+Then write a function that first findsthe station with the maximum riders onthe first day.
+Then find the mean riders per day forthat station.
+Also return the mean riders per dayacross all stations for comparison.

@@ -1,0 +1,42 @@
+I'm going to run each piece ofexample code and see what it does.
+The first piece of code involves addinga series to a square data frame.
+That is, a data frame with the samenumber of rows as columns.
+I've used 0, 1, 2, and 3 as both theindex values and the column names here.
+I've printed out boththe original data frame, andthe result of adding the series here for
+comparison.
+It looks like the value 1 was addedto each value in the first column,
+2 was added to each value inthe second column, and so on.
+So it looks like each value fromthe series was added to one ofthe columns of the dataframe.
+Given this, I have an idea what willhappen if I add a series to a dataframewith a single row.
+But I'll try it anyway.
+Again, I've printed both dataframes here for comparison, andagain it looks like each value from
+the series was added to a single columnfrom the data frame.
+1 was added to the first column, 2 wasadded to the second column and so on.
+Something that might not be obviousgiven this is what will happen if I adda series to a data frame
+with only one column?Will it figure out somehow thatit should add the values toeach row of the data frame instead?
+I tried it out here, andyou can see that's not what happened.
+Instead, the result of the additionactually has four columns, one foreach value in the series, and every
+column except the first contains NaNs.
+The first column had 1 addedto each value, as before.
+By the way, the code df.add s it'susually the same as df plus s,
+so I usually don't call this function.
+But the benefit of using thisfunction is that it can also takean axis argument.
+If I use axix = columns,
+I get the same result as df plus s.
+However if I use axis='index' then eachvalue of the series will be added toone row of the data frame, which
+might be what I want in some cases.
+Now in all the examples I've tried sofar, the index of the series has beenthe same as the column names of
+the data frame, 0, 1, 2, and 3.
+Now I'm going to look at an examplewhere that's not the case.
+Here the index of the series is B,C,
+D, and E andthe column name of the data frame are A,
+B, C, and D.
+The result here is very similar to whathappened when we added Pandas series andthe indexes didn't match exactly.
+For each letter that wasn'tpresent in both the data frame andthe series, the result is NaN.
+For letters that were present in both,
+the addition has beenmatched up based on letter.
+So every value in the b columnhas had 1 added to it and1 was the value inthe series with index b.
+So in summary,
+adding a data frame to a series,
+adds each value of the seriesto one column of the data frame.
+And it matches up the series to thedataframe using the index of the seriesand the column names of the dataframe.

@@ -1,0 +1,20 @@
+I decided to make a plot of subwayridership by day of the week.
+The first thing I wanted to dowas take a look at the data andremind myself where that
+information was stored.
+And I can see here that it'sin the day_week column.
+So the first thing I'm going todo is group the subway data bythe day of the week.
+And as before, this gives mea data frame grouped by object soI can't really see what's going on yet.
+Next, I want to take the meanridership for each day of the week, soI'll add .mean.
+This time, I can see some results.
+This is showing me the mean value ofeach column for each day of the week.
+I'm specifically interested inthe ENTRIESn_hourly column, soI'll look at that one.
+And then running this again, I seea series containing only the values forthe ENTRIESn_hourly column.
+And I'll name thisseries ridership_by_day.
+Next I'm ready to makea plot of these values.
+As usual I'll use %pylab inline tomake sure the plots appear withinthe notebook and import seaborn as sns
+to make my plots look a little nicer.
+Next, I'll call ridership_by_day.plot.
+And this is the plot I get.
+The most striking I notice is thatthe ridership is significantlylower on days 5 and
+6 than during the rest of the week.
+Days 5 and 6 are Saturday andSunday, so this makes sense.

@@ -1,0 +1,36 @@
+Once you've created a data frame,
+how do you access its elements?As an example, I'm using the sameridership data that you looked at
+earlier, with stationnames as the column names.
+I'll also use the index argumentto add dates, as the row indexes.
+When I take a look at the data frame,
+iPython notebook displays it as a table,
+with the appropriate column names androw indexes.
+Accessing a single row ofa data frame is similar toaccessing a single element of a series.
+You use .loc to accessrows by their indexes.
+So here this code will give methe second row of the data frame.
+Similarly, you can use iloc toaccess rows by position, sothis code gives me the last
+row of the data frame.
+To access a single element,
+you can also use loc and iloc, butthis time,
+indicating both a row and a column.
+For example iloc at 0,
+3 gives the element for row 0, column 3.
+Similarly, using .loc I canspecify a date and a unit andget the corresponding value for
+that date and unit.
+You can also access columnsusing square brackets.
+So this code gives methe column just forunit R006 and you can seethe beginning of that column here.
+If this is starting to seem likea lot to keep track of, don't worry,
+it's all in the cheat sheet availablein the downloadable section.
+You can also use .values to get a 2DNumPy array containing only the valuesfrom your data frame,
+not the column names or row indexes.
+Of course you'll have to be carefulof your data types if you do this.
+One reason you might do this is ifyou wanted to take the mean of allthe values, rather than the mean
+of each row or each column.
+That operation isn't supported forPanda's data frames.
+But you could call .mean onthe NumPy array using .values.
+On the next screen you'll have a chanceto play around with data frames.
+I also want you to get some practiceusing data frames by re-writingone of the functions you wrote earlier,
+but this time for data frames.
+You could just call .values andthen reuse the code that you wrote forNumPy arrays.
+But I recommend that you figure outwhich of the operations you did beforewill still work on data frames, and
+which you'll have to use .values for.

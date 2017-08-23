@@ -1,0 +1,16 @@
+In the last lesson, you did a bunchof data analysis using Python.
+And you did use NumPy andmatplotlib a bit, but for the most part,
+you completed the analysis withoutusing any additional libraries.
+In this lesson, you're going to geta lot more familiar with NumPy.
+And I'll also introduce youto a library called pandas.
+Both of these libraries,
+especially Pandas take a littletime to learn how to use.
+But once you do, they'll make writingdata analysis code a lot easier.
+And your code will also runfaster when you use them.
+When I first started using Pandas,
+I spent a lot of time reading onlinedocumentation, going through tutorialsand I found it really difficult.
+This course contains the informationI wish I'd had when I started out.
+I won't be able to cover every featurethat you might want to use, butby the end, you'll be better equipped
+to read the documentation andlearn more on your own.
+In this lesson, I'll be focusing onusing NumPy and Pandas to analyze onedimensional data, so something like
+a single column of a spreadsheet.

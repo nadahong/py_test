@@ -1,0 +1,63 @@
+I'll show you how to writethe max_employment function first, andthen I'll go over the output you should
+have seen from the provided test code.
+I'm going to show running allthe code in an iPython notebook.
+To write the code I started off withthe maximum employment value as 0 andthe corresponding country as None.
+Next, I looped through eachelement of the two NumPy arrays.
+Since the two arrays should have thesame length, I could use either line ofcountries or line of employment here,
+it wouldn't make a difference.
+Next I checked whether the employmentdata from that country was greater thanthe maximum employment I had seen so
+far.
+If so,
+I updated both the maximum country andthe maximum employment value.
+Finally I returned the two values.
+Now this piece of code doesn't look anydifferent from what I would have writtenif I were using lists
+instead of NumPy arrays.
+That's a great techniqueto fall back on.
+If you can't find a specific NumPyfunction to do what you want,
+you can always write codetreating them just like lists.
+However, in this case, there's alsoan easier way to solve this using NumPy.
+I didn't expect you to know that, butI'm going to show you how it works.
+You may have realized you can useNumPy's max function to find the maximumemployment value.
+But that wouldn't give youthe corresponding country name.
+NumPy also has a function called argmaxand instead of the maximum value,
+it returns the position wherethe maximum value occurs.
+I'll name that position i,
+then I can get both the country andthe employment value byusing that position.
+Now I'll go through the test code.
+The first line importedthe NumPy library.
+The next line creates a NumPyarray of the first 20 countries wehave employment data for.
+One of the easiest ways to createa NumPy array is the way I did it here.
+First you create a python list andthen you call np.arraywith that list as an argument which
+converts it to a NumPy array.
+The next line uses the same techniqueto create an NumPy array of employmentrates in 2007.
+Next you should have seen that thisline printed the country at position 0,
+changing the 0 to a 3 printsthe country at position 3.
+The next few lines eachprint a slice of the array.
+This one prints everything from position0 up to but not including position 3.
+In this line,
+I've left the first number out, sothe slice starts at the beginning ofthe array, which gives the same results.
+Here I've left the second number out, sothe slice goes from position 17 allthe way to the end of the array.
+And finally I can actuallyleave both numbers offin which case I get the entire array
+from the beginning to the end.
+There's not really a good reason todo this since you could just usethe original array, but
+it makes the notation consistent.
+Now I'll look at the elementtype of a few arrays.
+Which NumPy calls the dtype.
+I can see that the countryarray has type S22.
+S stands for string, and22 means that the length of the longeststring in the array is 22 characters.
+The employment array has type float64.
+That means the employment valuesare floating point values.
+That is, they have a decimal point.
+And they're being stored using 64 bits.
+The next four arrays contain integers,
+floating point values, booleans andstrings of length two.
+When I loop over the countries array,
+I see that each country getsprinted out one at a time.
+And I can use this type of loop togo over pairs of values from twodifferent arrays.
+Here i is the position in each array andthen I get the country at that positionand the employment
+value at that position.
+Finally I just print both values out.
+If you haven't seen Python'sstring format function before,
+it finds each occurrenceof these { } andthen replaces them with the argumentsof the format function.
+When I run this I see each countryprinted out with its correspondingemployment value.
+And finally, these functions give themean, standard deviation, maximum andsum of the employment data.

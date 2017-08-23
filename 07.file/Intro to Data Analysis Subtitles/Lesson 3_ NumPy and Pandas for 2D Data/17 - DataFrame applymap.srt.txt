@@ -1,0 +1,21 @@
+Just like for a pandas series,
+you sometimes might want to perform somecomputation on a DataFrame that can'tbe done using built-in functions or
+operations.
+Similarly to a series,
+you can write a function, let's say f,
+that takes in a single element fromthe DataFrame and returns a new element.
+Then you can applythat function f to eachelement of the original DataFramein order to get a new DataFrame.
+For example, last lesson,
+I wrote a function called clean_stateto take in a state that mightbe in one format or another, and
+return it in a standardized format.
+To call this function on eachelement of the DataFrame df,
+you would call df.applymap(clean_state).
+Now, why is thisfunction called applymapinstead of apply like it was for series?I think it's kind of unfortunate, but
+you'll see in the next video that applydoes something slightly different forDataFrames.
+In the next exercise, I want youto write a function that convertsnumerical grades to letter grades.
+You'll be given a DataFramewhere each column is an exam,
+each row is a student and each value isthe score that student got on that exam.
+You should use the rule thata score of 90 or higher is an A,
+80 or higher is a B, and so on.
+Use applymap to create a new DataFrame,
+where each numerical score hasbeen replaced by a letter grade.

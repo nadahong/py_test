@@ -1,0 +1,25 @@
+I’ll start out by taking a look at thefirst three rows of the two data framesI want to merge.
+The first thing I'll need to decideis what to pass to the on keyword,
+that is how to match up rows fromthe two different data frames.
+It looks to me like I’ll wantto match up by date and hour,
+latitude and longitude.
+And so I'll call subway_df.merge,
+weather_df.
+And then the on keyword will bea list of those four fields.
+I'll also need to decide whether howshould be inner, outer, left, or right,
+and I've chosen inner, since I only wantrows that are present in both tables.
+The result is a data frame withall the columns from both tables.
+For example, the entries and exitscolumns are from the subway data, andthe fog and pressure columns
+are from the weather data.
+They've been matched up by date,
+hour, latitude and longitude.
+Now one thing that was convenient hereis that the four columns I wanted tomerge on have the same
+name in both data frames.
+What would I do ifthat weren't the case?For example, what would I do ifthe date column were called DATEn
+in the subway data and lowercasedate with no n in the weather data?Because of this, Pandas allows
+you to specify the left_on,
+meaning the columns for the left tableand the right on meaning the columns forthe right table separately.
+For the left on,
+the columns will be the same as before.
+And for the right on, the columns willbe the same but with the other name forthe date column.
+And this code should givethe same results as before.

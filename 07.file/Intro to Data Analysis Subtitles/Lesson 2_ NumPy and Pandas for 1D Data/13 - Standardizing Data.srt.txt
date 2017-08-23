@@ -1,0 +1,26 @@
+Now I'm going to give you another chanceto practice using vectorized operations.
+One question you'll often wantto answer in data analysis is,
+how does a single data point compareto the rest of the data points?For example, I mentioned that I'm
+interested in how the employment rate inthe U.S. compares the the employmentrate in other countries.
+Is it higher or lower than the average,
+and by how much?The question isn't very well-defined,
+butone typical way that people use toanswer it, is to convert each data pointto a number of standard
+deviations away from the mean.
+This is called standardizing the data.
+For example, let's considerthe employment data we have for 2007.
+The mean employment rate was 58.6%,
+the standarddeviation was 10.5%, and the employmentrate in the United States was 62.3%.
+Then the difference betweenthe United States employment, andthe mean employment rate was 3.7%.
+This is equal to about 0.35standard deviations orabout a third of a standard deviation.
+In Mexico on the other hand, the meanemployment rate in 2007 was 57.9%.
+Thus for Mexico the differencebetween the employment rate andthe mean employment rate was -0.7%.
+Note that I use a negative difference toindicate a value that's below the mean,
+and a positive difference to indicatea value that's above the mean.
+This translates to about 0.067standard deviations below the mean,
+giving a standardizedscore of negative 0.067.
+On the next screen,
+I'd like you to write a function thattakes a numpy array as an input.
+And the array could containany type of numerical data,
+such as employment data for example.
+Then I want you to returna standardized array,
+where each data point has been replacedby the standardized data point.

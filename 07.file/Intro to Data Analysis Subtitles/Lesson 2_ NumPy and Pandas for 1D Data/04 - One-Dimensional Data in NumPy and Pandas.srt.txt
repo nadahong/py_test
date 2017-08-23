@@ -1,0 +1,27 @@
+To show you why Numpy andpandas are useful.
+I'm going to revisit somecode from last lesson, andsee how it would look ifI wrote it using pandas.
+This is the code to first take a CSV andread it into a list, andthen get the unique
+accounts out of that list.
+I'm running this code onthe daily engagement full file,
+since that file is rather large, andpandas deals with large files nicely.
+Now if I run the code to load the fileinto a CSV, it takes a little while andfinally it finished.
+Now, we cut some of the loadingtime out of the video, butit took about one minute.
+Then after that, getting the uniquestudents takes a little while as well.
+In fact, this one is going to takeabout six seconds, and now we're done.
+As you'll see in a minute,
+when I use pandas,
+the code will run much more quickly.
+In fact, in pandas this will alsobe only three lines of code.
+The first will be this import statement.
+In the second, I'll read it in the fileusing pandas built-in read CSV function.
+And, finally, I can specify that Iwant to look at the acct column.
+And then use pandas built-in uniquefunction to get the unique accounts.
+As you can see, pandas has a lot ofconvenient functions, like read CSV andunique, that previously
+we had written ourselves.
+Now of these three lines of code, theone that actually takes the longest forme is importing pandas, which takes
+several seconds the first time I do it.
+That is certainly very long forjust importing a library.
+But it more than makes up for it withthe speed of the rest of the code.
+After that, reading the data intothe CSV takes just a few seconds,
+rather than the one minutethat I waited earlier.
+And actually getting the unique accountsfinishes before I can even blink.

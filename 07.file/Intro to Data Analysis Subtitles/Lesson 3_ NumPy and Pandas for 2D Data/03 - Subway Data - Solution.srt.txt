@@ -1,0 +1,20 @@
+Here are some questions I thought of.
+In general, I'm interested in whatvariables are related to higher orlower subway ridership.
+If I were working forthe New York Subway,
+this information might be useful whenscheduling how many trains to run.
+But since I don't I'm just curious.
+There are several variables thatcould be related to subway ridership.
+For example,
+which stations have the most riders andhow dramatic is the difference?I'd also like to know what are the
+ridership patterns like over time?Will I be able to see rush hour effects?How will weekdays and weekends differ?
+This data includes the month of May,
+which includes Memorial Day, soI wonder whether Memorial Day ridershipwill be similar to weekend days?
+I could also look at how the weatheraffects subway ridership.
+Do more or fewer people ridethe subway when it's raining,
+when it's hotter out, etc.
+I could also investigate weatherpatterns in New York independently ofthe subway.
+For example,
+since May comes before the summer,
+is the weather systematically gettinghotter and hotter throughout the month?And how does the weather
+vary across the city?Hopefully your excited toanswer some of these questions.
+Lets get started.

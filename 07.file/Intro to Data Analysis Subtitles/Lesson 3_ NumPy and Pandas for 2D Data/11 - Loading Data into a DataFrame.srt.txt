@@ -1,0 +1,13 @@
+A data frame is a particularly good datastructure to represent the contents ofa CSV file.
+It's a two-dimensional datastructure with a different type foreach column, which is often
+exactly what you want for a CSV.
+Pandas has a function called read_csv,
+which takes in the file name of a CSVfile and loads it into a data frame.
+I'll use this to load in the New Yorksubway and weather data.
+Since there is a lot of data I don'twant to print out the entire data framelike I've done before.
+Instead, I'll use the head function toprint out just the first five lines.
+The head function returnsa smaller data frame sothe results display justlike a small data frame.
+I can also use the describe function tosee some statistics about each columnlike the mean and
+the standard deviation.
+You got a preview of the read CSBfunction at the end of the last lesson.
+It was used by the starter codethat loaded in the gap minderdataset for you.

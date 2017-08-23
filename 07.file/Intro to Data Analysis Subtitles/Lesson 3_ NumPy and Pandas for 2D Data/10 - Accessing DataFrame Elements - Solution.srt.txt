@@ -1,0 +1,38 @@
+I'll start with the same function Iwrote before for NumPy arrays, andthen I'll try each line to see whether
+it works on data frames as well.
+First I'll try outthe first line of code,
+which is meant to take the argmaxof the first row in the data frame.
+This gives me a pretty scarylooking error message,
+starting with type error andending with unhashable type.
+Now, it can be really hard to figure outwhy you're getting error messages likethis, and
+I find that in general Panda's errormessages aren't always very helpful.
+Usually what I do is try to doublecheck the codes that I just wrote.
+So for example, if I was modifying somecode from a documentation page, I'llmake sure that I used exactly the same
+code as the documentation page used.
+In this case,
+the problem is that to access a rowof a dataframe, I need to use i loc.
+I also don't need this colonanymore to specify all columns.
+And this time when I runthe code I get the value R006.
+It looks like R006 is the fourth stationwhich is indeed the one with the maximumriders on the first day.
+Note that for a numpy array the arcmax function returned to the position.
+But for a series, the arc max functionis returning the index of the series.
+Or in this case the columnname from the data frame.
+So I'll update this linewithin my function.
+Next I'll try out the secondline of code from the function.
+I've used R006 here as the max station.
+Again, I get a scarylooking error message andagain this is because this is not how
+you access a column of a data frame.
+I don't need the colon here.
+So trying again it lookslike it worked this time.
+I'll go ahead and make thatupdate in the function as well.
+And finally I'll try out the lastline of code from the function.
+And this line of code does work butit provides a series containingthe mean for each column.
+Rather than the overall mean,
+which is what I wanted.
+Like I mentioned before,
+there's no way to directly calculatethe overall mean of the dataframe, soinstead I'll use .values to take
+the mean of the NumPy array.
+And trying this out, I can see that itgives a single number, like I expected.
+And once again, I'll updatethe corresponding part of the function.
+Now I'll try calling this functionon my ridership data frame andI get the same answer that I got before
+with an NumPy array, which is good.

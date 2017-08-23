@@ -1,0 +1,14 @@
+Here are some questions I thoughtof that I'm interested in.
+First, how has employmentin the US varied over time?Of course, you could ask the same
+question about another country.
+I'm particularly interested in the US,
+because that's where I live.
+But you may have another countryyou're interested in investigating.
+In the most recent year we have data on,
+what are the highest andlowest employment levelsout of all the countries?Which countries have
+those employment levels?And where is the US on that spectrum?Of course,
+I could ask these same questions forany of the other variablesin the data set, as well.
+I'm also interested in whether there areany consistent trends across countries.
+For example, have there beenany global recessions andif so, can I find them in this data?
+Answering this last question would bea bit complicated and we're not goingto get into it in this lesson, but
+we can definitely tackle the others.

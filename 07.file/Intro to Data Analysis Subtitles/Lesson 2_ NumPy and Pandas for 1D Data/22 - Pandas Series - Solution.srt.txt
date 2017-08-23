@@ -1,0 +1,34 @@
+I'll start off by calculating how manyof the pairs of data points are inthe same direction relative
+to their respective means.
+That is, both above the mean orboth below the mean.
+To do this, I'll first createan array called is_same_direction,
+which contains a boolean foreach pair of data points.
+Now there are two cases for how thepairs could be in the same direction.
+They could either be both above theirmeans or both below their means.
+So I'll create two separate arraysof booleans for those two cases.
+I can use this code to checkwhether each value of variable1 isgreater than the mean of variable1, and
+each value of variable2 is greaterthan the mean of variable2.
+Again make sure you add the parentheses.
+It's important to do the comparisonsfirst and then do the logical and.
+The code to check whether both variablesare below the mean is identicalexcept with less than signs
+instead of greater than signs.
+Then two variables are in the samedirection, if they are both above orboth below their means.
+Like I mentioned inthe instruction video,
+you can add up an array of booleansto see how many of them were true.
+So I can find the number of pairs thatare in the same direction by calculatingis the same direction dot sum.
+Finally, I can calculate nom differentdirection by taking the len of variableone minus the number of
+pairs in the same direction.
+Last, I'll need toreturn the two numbers.
+Now if you ran this function for thelife expectancy and GDP arrays given inthe programming exercise, you should
+have seen that there were 17 pairs thatwent in the same direction, andthree that went in different directions.
+The fact that most of the pairs went inthe same direction indicates that thesetwo variables are positively correlated.
+That is, when one is higher,
+the other tends to be higher as well.
+If the first number had been small,
+and the second number had been large,
+that would indicate that the variablesare negatively correlated.
+When one tends to be large,
+the other tends to be small.
+And if the two numbershad been roughly equal,
+then that indicates that theremight not be a strong relationship.
+It's about equally likely forone variable to be positively correlatedwith the other as negatively correlated.

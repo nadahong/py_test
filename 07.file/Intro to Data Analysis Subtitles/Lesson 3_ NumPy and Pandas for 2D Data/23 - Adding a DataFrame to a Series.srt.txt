@@ -1,0 +1,6 @@
+You saw before that you could usevectorized operations to add twoDataFrames together, just like
+you can add two series together.
+It's also possible in pandas toadd a DataFrame to a series.
+What do you think this will do?On the next screen, try it out and seeif you can figure out what is happening.
+Once you think you know how it works,
+watch the solution videoto see if you were right.

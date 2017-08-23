@@ -1,0 +1,59 @@
+So far in this lesson, you'vebeen doing computations onseries usingbuilt-in functions.
+For example, the mean functionand vectorized operations.
+For example, plus forvectorized addition.
+But what do you do whenyou want to perform somecalculation that's notbuilt into pandas and
+can't be performed usingsimple vector s operations?Like you saw before,
+one option would be to treatthe series as a list usingfour loops oraccessing individual
+elements of thee series.
+There is anotheroption though,
+pandas has a function calledapply(), which you can use toperform computations that
+aren't built into Pandas.
+Apply() takes a series anda function and it createsa new series by applyingthe function to every element
+of the original series.
+So for example, supposethe function was add three,
+which takes a number andadds three to it.
+Applying this function to theseries on the left would givethe series on the right.
+First, add three would beapplied to the first elementof the series giving four.
+Then add three would beapplied to the second elementof the series, giving five.
+Then to the third element ofthe series, giving six andso on.
+If you're familiar with thePython function map apply() isexactly the same, but it works
+on series instead of lists.
+If you haven't heard of map,
+that's okay too.
+Now in this exampleof adding three,
+it would have been betterto use vectorized addition.
+If this series were named s,
+then you could create the newseries with the code s+3.
+And this would do the samething as s.apply(add 3).
+However, apply() can be veryuseful in cases where there isno built-in operationthat does what you want.
+For example, suppose you havea series of states where somestates are representedby the full name and
+others by the abbreviation.
+I want to clean up the data byreplacing each full state byits abbreviation.
+Now let's say,
+I've already writtena function that does this fora single state.
+The code might looksomething like this.
+First, I check if the valueis already an abbreviation.
+In which case,
+I return it unchanged.
+Next, I check ifthe state is Alabama.
+In which case, I return theabbreviation for Alabama, andso on, you get the idea.
+Now I could createan empty list,
+then loop over the series,
+then call my clean_statefunction on each valuein the series andappend each newvalue to the list.
+But I probably really wantedby cleaned data to be a pandaseries rather than a list, so
+I could convert this list to aseries at the end of the loop.
+Instead though, I coulduse the apply() function.
+First, I type the nameof my original series,
+which is states, then Icall the apply function.
+And as an argument tothe apply() function,
+I give the clean_statefunction that I wrote to cleanup each state.
+Note that I don't putparenthesis afterthe clean_state function, I'mnot calling the function here.
+I'm giving the entire functionas an input to apply().
+The main advantage of usingapply() over a loop is that itmakes your codea lot more concise.
+It might also beslightly faster.
+But in this case, the bulkof the time will probably bespent withinthe clean_state function.
+So, it probably wonÂ´tmatter much from a speedperspective whether Iuse a loop or apply().
+Now, it's your turn.
+Write code that will takea series of names in the formof, firstname, lastname and
+then put them into the formlastname, firstname.
+You might find Python's splitfunction helpful, there'sa link to documentationin the instructor notes.

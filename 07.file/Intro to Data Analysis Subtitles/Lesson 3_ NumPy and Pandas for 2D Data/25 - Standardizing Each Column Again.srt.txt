@@ -1,0 +1,8 @@
+Earlier this lesson you wrote codeto standardize each column ofthe data frame using apply.
+Now using what you just learned,
+I want to try the same thing again, butthis time without using apply.
+Instead, use rectorized operations.
+As an extra challenge, try standardizingeach row of the data frame instead.
+Again, without using apply.
+This one is tricky.
+You might have to experiment fora while to get it to work.

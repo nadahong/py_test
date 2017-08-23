@@ -1,0 +1,8 @@
+Just like last lesson, you'll beable to complete all the programmingexercises for
+this lesson on the Udacity website.
+But the data is available in thedownloadable section in case you'd liketo explore it further.
+Again, I'll be focusing on NumPy andPanda's rather than going throughthe data analysis process in order.
+But I still want you tostart by asking questions.
+So download the description of the datafrom the downloadable section,
+then think of at least five questionsyou could answer with this data andshare them on the forums.
+When you're finished, check these boxes.

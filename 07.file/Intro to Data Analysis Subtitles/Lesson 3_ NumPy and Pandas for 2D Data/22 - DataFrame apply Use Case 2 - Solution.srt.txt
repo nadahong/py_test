@@ -1,0 +1,32 @@
+As before, I'll start off bywriting a function thatoperates on a single column,
+which I'll callsecond_largest_in_column.
+Now there are a few differentways that I could findthe second largestvalue in a column.
+One way that occurs to me isI could sort the column indescending order,
+then look at the secondvalue in the column.
+We haven't sorted a pandaseries before, soI'll start by Googlingpanda's sort series.
+This first link is the pandasdocumentation page fora function called sort.
+This looks like what I want,
+butthere's a note that thisfunction has been deprecated.
+And instead, I should usethe sort values function withinplace equals true forinplace sorting.
+I'll click this linkat the bottom to seethe documentation forthe sort values function.
+I can see that the inplaceargument affects whetherthe series will besorted inplace,
+the alternative beingto create a new series.
+Now, I don't want to modifythe original series.
+So I'll use inplaceequals false,
+which is the default value forinplace.
+I can also see that there'sa flag called ascending, whichcontrols whether the series
+is sorted in ascending ordescending order.
+I'll want to pass false, sothat the series will besorted in descending order.
+So here, I'm creatinga sorted column by callingthe sort_values functionwith ascending=False.
+And like I said, I'm using thedefault value for in place.
+The sorted column willbe a panda's series, soI can access the secondvalue using iloc and
+the second value willbe at position one.
+Now, I'll try calling thisfunction on one of the columnsin the data frameto see if it works.
+It returned 4,
+which is indeed,
+the second largestvalue in column A.
+Now I'm ready to take inthe second_largest function,
+which will take inan entire data frame.
+The real work hasbeen done already andnow I just need to applythe second_largest_in_column
+function, to the data frame.
+Finally, I'll call thisfunction on the test dataframe andit looks like it worked.

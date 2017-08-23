@@ -1,0 +1,6 @@
+The argmax function on the pandaseries returns the indexwhere the maximum value occurred.
+In this case,
+the index will be the country name.
+Then to find the valuecorresponding to that country,
+I'll use the loc attribute.
+And it'll auto return the country andthe value.

@@ -1,0 +1,14 @@
+In order to write the reverse_namesfunction, I'm going to start offby writing a function that
+reverses only a single name.
+First I'll split the name on a space,
+which should giveme a list containing the first name andthe last name separately.
+Then I'll extract the first name andthe last name using split_name at 0 andsplit_name at 1.
+And finally I'll return the last name,
+followed by a comma anda space, followed by the first name.
+Now before trying to apply myreverse_name function to the entireseries, I'll test it
+out on a single value.
+I'll use the iloc attribute to getthe name at position zero, andthen reverse that name.
+And sure enough, the name Andre Agassihas been transformed to Agassi, Andre.
+Now I can reverse all the namesusing the apply function.
+Specifically, I'll return namesthat apply and all passes andargument the reverse name function.
+And when I call reverse names Iget each of the names reversed andcollected in a panned series.

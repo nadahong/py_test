@@ -1,0 +1,12 @@
+Another benefit of nomparies is thatthey support something called vectorizedoperations.
+The name is taken from linear algebra.
+But if you aren't familiar withlinear algebra, that's fine.
+For the purposes of this discussion,
+you can think of a vector asjust being a list of numbers.
+So, for example, one, two three orfour, five, six would both be vectors.
+Now in linear algebra you can addtwo vectors of the same length.
+This is called vector addition.
+Now if you were defining vectoraddition how would you define it?Specifically, if you were
+to add these two vectorswhat would you expect the result to be?I've added some choices here.
+There's no right orwrong answer to this question,
+just select the one you would choose.

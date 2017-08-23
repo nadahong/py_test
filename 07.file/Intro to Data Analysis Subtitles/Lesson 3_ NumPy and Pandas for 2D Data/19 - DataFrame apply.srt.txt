@@ -1,0 +1,36 @@
+I mentioned in the last video that dataframes also have an apply function, sowhat does it do?
+Well, in some sense,
+apply on data frames actually isthe direct analog of apply on a series.
+It depends on what you considera single piece of a data frame.
+You could say that a single piece isa column, rather than a single element.
+The function you pass to apply, whichI'll call f, takes in a panda series,
+which is an entire columnof the data frame.
+And it returns a new panda series,
+which is a new column of the data frame.
+Then when you call df.apply(f),
+apply calls your function f oneach column of the data frame.
+You might be wondering why you woulddo this, instead of using apply map.
+And the answer is thatthe operation you want to do toeach element of the data frame
+might depend on the entire column.
+Consider the exampleof grading on a curve.
+Suppose I want to give an A to the 20%of students with the highest grades,
+B to the next 30%, C to 30%,
+D to 10%, and F to 10%.
+Let's not debate whether thisis a reasonable grading policy.
+Instead, let's talk aboutthe code I would write.
+I could store the numerical scores ina data frame just like I did before,
+with one exam in each column andone student in each row.
+But this time I can't use apply map.
+If I just look at one score, I don'tknow what letter grade it should getwithout looking at the other scores for
+that exam.
+For example, is a score of 70 an A?If the other scores on the exam are allhigh, then 70 would not be an A.
+But if the other scores on the exam areall low because this was a harder exam,
+than a 70 might be an A.
+So what I would do is write a functionf that takes in the scores fora single exam, and
+returns converted scores for that exam.
+Then I would call df.apply(f) to applythat function to the entire data frame.
+Apply also takes an access argument soyou can also write a function thatoperates on one row at a time
+if that's what you need.
+Last lesson you wrote a function tostandardize a single panda series.
+That is, convert each value tothe number of standard deviationsthat value is above or below the mean.
+Now, I'd like you to use apply tostandardize each column of a data frame.

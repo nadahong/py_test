@@ -1,0 +1,16 @@
+There's also another possible way touse the apply function for data frames.
+Instead of taking in one column andreturning a new column,
+the function f could take in onecolumn and return just a single value.
+In this case,
+instead of creating a new data frame,
+apply will create a new series.
+Where each column of the data framehas been reduced to a single value.
+For example, if I wanted to findthe maximum value in each column,
+I could call, df.apply(np.max) tocall NumPy's max function oneach column of the data frame.
+This would give me the same result, it'scalled the built-in function df.max.
+So in this case using the built-infunction would be simpler.
+But as usual apply can be usefulwhen there's not a built-infunction that does what you want.
+For example what if you wanted to findthe second largest value in each column?In that case it would make sense
+to use the apply function.
+In the next exercise,
+I want you to do just that.

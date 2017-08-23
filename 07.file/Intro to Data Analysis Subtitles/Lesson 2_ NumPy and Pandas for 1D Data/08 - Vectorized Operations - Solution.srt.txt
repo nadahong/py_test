@@ -1,0 +1,16 @@
+Now these are all reasonable answers.
+And in fact, they are all implementedby different programming languages.
+This first one is vector additionas defined by linear algebra.
+First, the first two numberswere added to get 5.
+Then the second two were added to get 7.
+And finally the last twowere added to get 9.
+This is also the behavioryou get when you add two.
+The second result is the result ofsomething called list concatenation, andthis is what adding two
+lists does in Python.
+A new list is created with allthe elements from the first listfollowed by all the elements
+from the second list.
+And the last option is very common.
+Most languages do implementlist concatenation.
+But in a lot of languagesyou call a function oruse some different symbolother than the plus sign.
+So then using the plus sign with twoarrays or less would give you an error.
+Since this first option is what Num Pydoes that's the option we'll be focusingon in this course.

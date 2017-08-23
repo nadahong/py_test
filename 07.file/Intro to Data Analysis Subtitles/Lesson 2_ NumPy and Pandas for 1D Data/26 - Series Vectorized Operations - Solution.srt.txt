@@ -1,0 +1,35 @@
+First I'll look at what happens if Iadd two series with the same index.
+So here are both series 1 andseries 2 have the index a, b, c, d.
+When I add these series together,
+the results aren't surprising.
+The first element from eachseries is added together,
+the second element from each seriesis added together and so on.
+Now we'll take a look at a case wherethe two series have the same indexes,
+but the values are in a different order.
+So series 1 still has the index a,
+b, c, d, butseries 2 now has the index b, d, a, c.
+Now when I add thesetwo series together,
+I can see that the matching up has beendone by index rather than by position.
+Instead of adding the first twovalues together, both values forindex a have been added together,
+both values forindex b have been added together,
+and so on.
+Now we'll take a look at two serieswhere the indexes don't have exactlythe same values.
+Here, both series 1 and series 2 have cand d, but only series 1 has a and b,
+and only series 2 has e and f.
+When I add these two series,
+I see that c and d,
+the index values in common,
+have been matched up.
+For index values that were onlypresent in one series, a, b, e andf, NaN is the result,
+which stands for not a number.
+Given that, I have a hypothesis forwhat will happen when I add series withindexes that don't overlap at all.
+But I'll still try it and see.
+So in this case,
+series 1 has index values a, b, c and d.
+And series 2 has index e, f, g, and h.
+Sure enough, when I add them together,
+I get all the index values from bothseries and value in each case is NaN.
+By the way, other vectorized operationswith series work the same way.
+Values are matched up basedon index not position.
+And if an index value ispresent in one series butnot another, the resulting value
+will be NaN, for not a number.

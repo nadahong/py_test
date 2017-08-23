@@ -1,0 +1,10 @@
+Again, these are all reasonable answers.
+The first, this is what Python does.
+It creates a list with all the valuesfrom the original list repeatedthree times.
+One, two, three.
+The second is the behavior youget in both linear algebra andwith NumPy arrays.
+The first element of the original vectorwas multiplied by 3 to get the firstelement of the result.
+The second was also multiplied by 3 andthe third was multiplied by 3.
+And again,
+the third option is very common.
+Many programming languages wouldnot allow you to multiply a list oran array by a number.

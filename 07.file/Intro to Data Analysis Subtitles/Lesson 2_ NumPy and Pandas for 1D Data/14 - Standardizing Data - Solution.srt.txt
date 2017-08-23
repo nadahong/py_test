@@ -1,0 +1,21 @@
+Again, I'll first think about howto standardize a single data point,
+say the value at position zero.
+First, I'll calculate the distanceof that value from the mean,
+which I can do by subtracting.
+Then to convert to a numberof standard deviations,
+I'll need to divide bythe standard deviation.
+And again,
+parentheses are important here.
+So this will calculatea single standardized value.
+And I could use a loop tostandardize all the values, butinstead I'm going to usevectorized operations.
+Again, vectorized operations make thecode to operate on an entire array verysimilar to the code that
+operates on a single value.
+I'll simply change thisvariable from a single valueto the entire array of values.
+Now values is the entire array, andthe mean is still a single number.
+So this subtraction subtracts the meanfrom each value in the array.
+Then the standard deviationis still a single number, sothis division divides each element of
+the array by the standard deviation.
+And since this standardized all thevalues in the array, I will change thisvariable to standardized values,
+and I'll delete this line.
+And finally,
+I will return the standardized values.

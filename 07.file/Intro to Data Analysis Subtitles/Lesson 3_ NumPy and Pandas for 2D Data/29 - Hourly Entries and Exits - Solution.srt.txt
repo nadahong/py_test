@@ -1,0 +1,23 @@
+I'll use the function I wrote earlieras a starting point since that will bethe code to calculate the hourly
+entries and exits for a single group.
+This time I've namedthe functionhourly_for_group.
+Now the first thing I'll need to dois group the ridership_df by unit.
+As usual this givesthe DataFrameGroupBy object.
+Now it might seem logical to apply thehourly_for_group function at this point.
+However, if I try this I geta message that says type error.
+Unsupported operated types for minus.
+String and string.
+The reason this is happening is pandasis trying to apply the hourly forgroup function to each column of
+the data frame, including the unit andtime columns.
+Since these columns contain strings,
+the function doesn't work on them.
+You can't subtracta string from a string.
+To fix this,
+I need to select just the entries andexits columns,
+before applying this function.
+Once I've done that,
+the function works as expected.
+This time, I see two rows of NaNs,
+one for each station.
+That's because foreach station there was one row,
+where there was no previousrow to compare it to.

@@ -1,0 +1,11 @@
+In order to writethe standardized function,
+I'm first going to write a function thatstandardizes one column of a DataFrame,
+which I can then call on eachcolumn of the DataFrame.
+I'll call the function that works ona single column, standardized_column.
+And hopefully, the code in thisfunction looks familiar by now.
+I'll test this function by calling it ona single column of the grades DataFrame.
+And it looks good to me.
+Then to standardize each column ofthe data frame, I'll call df.apply andpass in the standardized
+column function.
+When I try this out, I can see thatI got the same results as before forthe first column, and
+the results for the secondcolumn have also been computed.

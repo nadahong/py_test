@@ -1,0 +1,17 @@
+The first code snippet will print 2,
+3, 4, 5.
+I haven't shown you the plusequals operation before, butit will modify the existing array.
+So, before you run this line, both a andb will point to the same array whichcontains the elements 1, 2, 3, and 4.
+Running this line updatesthe values to 2, 3, 4 and 5.
+So now if you print a or if you print b,
+you'll see the same result,
+the array 2, 3, 4, 5.
+The second code snippet, on the otherhand, will print 1, 2, 3, 4.
+Once again, a andb start off referring to the same array.
+1, 2, 3, 4.
+However, the plus operator withoutan equal sign first creates a new array.
+The values in the new array are 2,
+3, 4, and 5.
+Then setting A equal to this new arrayupdates A to refer to the new array.
+B still refers to the previousarray which has not been modified.
+So when you print B youget the output 1, 2, 3, 4.

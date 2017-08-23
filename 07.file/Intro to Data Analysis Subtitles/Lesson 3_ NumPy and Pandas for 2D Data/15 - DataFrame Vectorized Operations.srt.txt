@@ -1,0 +1,24 @@
+Data frames also supportvectorized operations, andthey work similarly to vectorized
+operations for 2D NumPy arrays.
+Like pandaSeries, they match upelements by index and column name,
+rather than by position.
+On the next screen you'llget a chance to try out somedifferent vectorized operations and
+see what they do.
+There will also be an exercise foryou to get some practice.
+The Subway data in its originalformat did not includethe hourly entries and exits.
+Instead, it had cumulative ortotal entries and exits.
+So, for example if the totalentries were 10, 40, 60,
+65 and 85 for the first fivehours the station was open.
+Then the hourly entries forthe first hour would be 10.
+Again, assuming that this isthe first hour the station was open.
+And the entries forthe next hour would be 30,
+since 30 people joined to bringthe total from 10 up to 40.
+And the rest of the hourlyvalues would be 20, 5, and 20.
+We converted the total entries andexits into the hourly entries andexits that are available in the file
+in the downloadable section.
+In the following exercise you'll write afunction that takes in a data frame withcumulative entries in one column and
+cumulative exits in a second column.
+And then return the data framewith hourly entries and exits.
+You might find the shiftfunction helpful.
+Documentation for it is linkedin the instructor's notes butI recommend that you just try it out and
+see what it does.

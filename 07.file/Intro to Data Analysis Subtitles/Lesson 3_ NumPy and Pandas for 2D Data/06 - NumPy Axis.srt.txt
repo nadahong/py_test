@@ -1,0 +1,17 @@
+You just saw that NumPy functions likemean operate on the array as a whole butin many cases it might make sense to
+calculate the operation by row orby column.
+For example, consider the array ofsubway riders that you just looked at,
+where each column is a station andeach row is a date.
+It might make sense to take the meanridership per day across all subwaystations like you just did but you might
+also want to take the mean ridership foreach station or for each date.
+Most functions built into NumPy takean axis argument for this reason,
+which can be either zero or one.
+If the axis is zero,
+then the function will be calculated foreach column and if the axis is one,
+it will be calculated for each row.
+I find it hard to remember whichaxis is zero and which is one so,
+I always just try it out andsee before using the axis argument.
+To get some practice, I want you towrite some code to find the meanridership per day for
+each subway station.
+Then, out of all the subway stations,
+return the maximum andthe minimum ridership per day.

@@ -1,0 +1,32 @@
+I mentioned that the shiftfunction might be helpful.
+So I'll start off by lookingat the documentation for that.
+The documentation says that the functionwill shift the index by the desirednumber of periods with
+an optional time frequency.
+Now that seems pretty cryptic to me.
+So, I'm just going to try the functionout and see what it does.
+One thing I do see here,
+is that the shift function needs totake an argument called periods,
+which is an integer indicatingthe number of periods to move.
+So, I'll try shifting the exampleentries and exits data frame andto start off with, I'll shift with
+a number of periods equal to one.
+When I try this out,
+it looks like the first row ofthe resulting DataFrame contains NaNs.
+The second row corresponds to the firstrow of the original DataFrame,
+the third row corresponds tothe second row, and so on.
+Just to make sure I understand, I'vealso run this function with the argument2, and
+this time the first two rows are NaNs.
+And the third row of the resulting dataframe corresponds to the first row ofthe original data frame.
+To calculate the hourly entries andexits, I want to take each value inthe data frame and subtract
+the value from the previous row,
+which I can do using vectorizedoperations and the shift function.
+Here I've taken each value inthe data frame and subtracted,
+that dataframe shifted by one,
+which will give me the previous row.
+When I run this functionon the example dataframe,
+I get the following output,
+which looks reasonable.
+One odd thing is that the firstrow contains NaNs, butwhen you think about it,
+this makes sense.
+Because for the first row in the dataframe, you dont know how many hourlyentries and exits there were, since
+there's no previous row to compare to.
+It might make sense though to drop thisrow or replace these values with zero.

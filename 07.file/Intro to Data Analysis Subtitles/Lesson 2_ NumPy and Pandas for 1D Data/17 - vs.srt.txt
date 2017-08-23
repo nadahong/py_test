@@ -1,0 +1,12 @@
+Next, I want to talk about thedifference between + and += in NumPy.
+Before I tell you whatthe difference is,
+I want you to think about whatyou expect the difference to be.
+Look at these two code snippets, whichare the same, except that one says a +=this array and
+the other says a = a + this array.
+For each code snippet, select whatyou think its output will be.
+Your options are the array([1, 2,
+3, 4]), the array([2, 3, 4, 5]),
+or the code will produce an error.
+If you're not sure you caneither take your best guess oryou can try it and see.
+The important thing is not gettingthis right on the first try butthat you learn the answer for
+the future.

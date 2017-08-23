@@ -1,0 +1,33 @@
+So you just saw that if youadd two series together andif the indexes don't match,
+NaN will be filled in.
+Now, in a lot of cases,
+I might not want NaN ornot a number to show upin my resulting series.
+So if I didn't want the NaNs to beincluded, how would I deal with that?For questions like this there's almost a
+way to do what you want with Pandas, butit can be a bit tricky tofigure out what that way is.
+One thing I might try is doing a Googlesearch for pandas remove missing values.
+The second result,
+dropna looks promising.
+The first thing I noticed about thisdocumentation is that it operates onDataFrames, not series.
+You'll learn aboutDataFrames next lesson.
+Now the documentation forpandas isn't always perfect.
+When I saw this result, I wondered ifdropna would work on a series as well.
+I decided to try it andit runs out it did.
+This documentationalso refers to an axis.
+Again, this is something you'lllearn about in the next lesson.
+For now, the fact that this functionis emitting labels where some orall of the data are missing
+sounds promising.
+So I'll try saving the result of thisaddition to the variable sum result andthen I'll run sum_result.dropna.
+And sure enough, I get a new serieswhere all missing values are removed.
+There's actually a few different waysyou could solve this problem in pandas.
+For example,
+there's a way to treat missingvalues as zero before the addition.
+So then the result of adding thesetwo series would have value 1 forindex a, since there's
+an assumed zero in series 2.
+See if you can figureout how to do this.
+If you find a third solution to theproblem of NaNs, that's great as well.
+Now figuring things out like this byGoogling can be very challenging, butit's also very important.
+Pandas has a lot of functionality, andthis course won't beable to cover all of it.
+If you don't find whatyou're looking forright away, try a few different queries.
+If you get stuck,
+you can always watch the solution video.
+You can use the programmingquiz on the next screento test out whether yoursolution is working.
